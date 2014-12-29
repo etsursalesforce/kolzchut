@@ -1,6 +1,8 @@
-== MediaWiki for Kol Zchut ==
+MediaWiki for Kol Zchut
+=======================
 
-= Installation: =
+Installation
+------------
 
 * Sign up for Heroku
 * Install Heroku Toolbelt for your machine
