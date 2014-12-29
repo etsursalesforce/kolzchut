@@ -1,0 +1,1840 @@
+@import "mediawiki.mixins";
+@import "mw-imported";
+@import "variables";
+@import "mixins";
+@import "wikitemplates";
+
+/**************************************/
+/*          MediaWiki Overrides       */
+/**************************************/
+
+a {
+	color: @link-color;
+}
+
+#content a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: @link-hover-color;
+		text-decoration: underline;
+	}
+}
+
+
+#content .article-see-also a,
+#content .article-forms a {
+  color: @content-text-color;
+  text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: @link-hover-color;
+		text-decoration: underline;
+	}
+}
+
+
+#content .mw-editsection a,
+#content .wr-sharebar a {
+  text-decoration: none;
+}
+
+//** No underline
+#content .portal-box a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+#content .mainpage-portals-box a {
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: @link-hover-color;
+		text-decoration: underline;
+	}
+}
+
+.article-see-also .intro-box > ul > li:first-child {
+	font-weight: bold;
+}
+
+body {
+    font-family: @content-font-family;
+	color: @content-text-color;
+}
+
+.rtl a.external.free {
+	direction: inherit;
+}
+
+/** End MediaWiki Overrides */
+/****************************/
+
+/**
+ * This font was licensed for use by this website's owner.
+ * If you want to use it on *your* website, visit:
+ * Webfonts(s). To obtain a valid license visit: http://www.hebrewtypography.com/
+ *
+ * Webfont Name: Na Regular נע רגיל
+ * Foundry: Oded Ezer עודד עזר
+ * License: http://alefalefalef.co.il/webfonts/
+ */
+@font-face {
+    font-family: 'Na_OE_Pro-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/w/skins/helena/modules/helena/fonts/Na_OE_Pro-Regular/Na_OE_Pro-Regular.eot'); /* IE9 Compat Modes */
+    src: local('☺︎'),   /* Do not load a local font */
+    url('/w/skins/helena/modules/helena/fonts/Na_OE_Pro-Regular/Na_OE_Pro-Regular.eot?#iefix') format('eot'), /* IE6-IE8 */
+    url('/w/skins/helena/modules/helena/fonts/Na_OE_Pro-Regular/Na_OE_Pro-Regular.woff') format('woff'), /* Modern Browsers: Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('/w/skins/helena/modules/helena/fonts/Na_OE_Pro-Regular/Na_OE_Pro-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/w/skins/helena/modules/helena/fonts/Na_OE_Pro-Regular/Na_OE_Pro-Regular.svg#webfontgkJbe0mS') format('svg'); /* Legacy iOS */
+}
+
+#mw-content-text .intro-box ul,
+#mw-content-text .mainpage-portals-box ul {
+	.list-style-image("images/bullet-icon-green.png");
+}
+
+ol {
+	list-style-image: none;
+}
+
+/*
+@todo: set max-width using media-queries?
+*/
+.popover {
+	max-width: none;
+}
+
+#disclaimers {
+	text-align: center;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #6FAED8;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+@media screen and (min-width: 768px) {
+	#disclaimers {
+		font-size: inherit;
+	}
+}
+
+footer {
+    background-color: #5D5E5D;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    /*
+    	border-top-left-radius:15px;
+    	border-top-right-radius:15px;
+	*/
+}
+
+.footer-column {
+	color: #fff;
+}
+
+.footer-column > .footer-column-heading {
+	color: #fff;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 	1px solid #DDDDDD;
+	font-weight: bold;
+}
+
+.footer-column-body a {
+	color: #fff;
+}
+
+#footer-section-licensing a {
+	border-bottom: 1px dotted;
+}
+
+#footer-section-licensing a:hover {
+	border-bottom: none;
+}
+
+.kz-footer-newsletter {
+    margin-top: 15px;
+}
+
+
+.kz-footer-newsletter .checkbox-inline > label {
+	font-weight: normal;
+}
+
+.kz-footer-newsletter .form-group {
+	margin-bottom: 10px; // the default is 15px
+}
+
+/* For that extra label before the actual checkboxes labels */
+.kz-footer-newsletter .checkbox-inline-label {
+	vertical-align: text-top;
+}
+
+.kz-footer-newsletter button[type=submit] {
+	margin-left: 15px;
+}
+
+.kz-footer-newsletter fieldset {
+	display: inline-block;
+}
+
+a.dropdown-toggle {
+  text-decoration: none;
+}
+
+
+.nav a, .navbar a {
+  transition: all 0.1s linear 0s;
+}
+
+.navbar .nav a:hover {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .dropdown.open {
+  color: #333333;
+}
+
+/* Navigation Labels */
+/*
+.nav-block h3, .nav-block h3 span {
+  display: none;
+}
+*/
+
+  .nav-block.sidebar-no-well .btn {
+    margin-bottom: 7px;
+  }
+    .nav-block.sidebar-no-well .btn:last-child {
+      margin-bottom: 0;
+    }
+
+.navbar .navbar-brand {
+	min-width: 175px;
+	min-height: 50px;
+	padding: 5px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-decoration: none;
+}
+
+.navbar > .container .navbar-brand {
+	margin-left: 15px;
+}
+
+@media (min-width: 768px) {
+	.navbar > .container .navbar-brand {
+		margin-left: 0;
+	}
+}
+
+
+  /* To push content below navbar */
+  body {
+  	  padding-top: 60px;
+  }
+
+  /* Enable use of floated navbar text */
+  .navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .navbar-collapse ul.navbar-nav {
+  	  padding-left: 0;
+  }
+
+
+/*
+form.form-search .input-group .form-control:last-child,
+form.form-search .input-group-addon:last-child, .input-group-btn:last-child > .btn,
+form.form-search .input-group-btn:last-child > .dropdown-toggle,
+form.form-search .input-group-btn:first-child > .btn:not(:first-child) {
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 14px;
+}
+*/
+
+
+#sidebar-main .nav {
+	padding-left: 0;
+}
+
+.user-login {
+	display: none;
+	position:absolute;
+	right:0;
+	top: 0;
+}
+
+#user-dropdown-menu {
+	display: none;
+}
+
+@media (min-width: 768px) {
+  /* To push content below navbar */
+  body {
+  	padding-top: 130px; /*height(navbar) + 40px padding top-bar-padding */
+  }
+
+  .navbar .navbar-brand {
+  	  min-height: 90px;	/*@-top-bar-h*/
+  	  /* padding: 15px; */
+  	  padding-bottom: 20px; /*top-bar-padding*/
+  }
+.sidbar-nav {
+    min-width: 175px;
+  }
+
+  .user-login {
+  	display: inherit;
+  }
+
+  #user-dropdown-menu {
+  	  display: inherit;
+  }
+
+}
+
+#portals-list-wrapper {
+ display: none;
+}
+
+
+/* Site header */
+#top-nav {
+	background-color: @primary-color-blue;
+	min-height: 50px;
+}
+
+	/* Fix anchor jumping with fixed navbar */
+	/* This makes the items above un-clickable */
+	/*
+	.mw-headline {
+		margin-top: -50px;
+		padding-top: 50px;
+	}
+	*/
+
+@media (min-width: 768px) {
+  #top-nav {
+  	min-height: 90px;	/*@-top-bar-h*/
+  }
+	/* Fix anchor jumping with fixed navbar */
+	/* This makes the items above un-clickable */
+	/*
+	.mw-headline {
+		margin-top: -90px;
+		padding-top: 90px;
+	}
+	*/
+}
+
+.nav-block hr {
+  margin: 7px 0;
+}
+
+.btn {
+	background-color: @content-color-lightblue;
+	color: #e4ebef;
+	font-weight: bold;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+	background-color: #305c78;
+	color: #becfd8;
+
+}
+
+.btn-default,
+.btn-primary {
+	-webkit-border-radius: 3px/2px;
+	-moz-border-radius: 3px/2px;
+	border-radius: 3px/2px;
+	-webkit-box-shadow: 1px 1px rgba(0,0,0,.16), inset 0 1em rgba(255,255,255,.2);
+	-moz-box-shadow: 1px 1px rgba(0,0,0,.16), inset 0 1em rgba(255,255,255,.2);
+	box-shadow: 1px 1px rgba(0,0,0,.16), inset 0 1em rgba(255,255,255,.2);
+}
+
+
+/* BS2-style button */
+/*
+.btn-kz {
+	color: #F1F4F5;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #1A4966;
+	*background-color: #1A4966;
+	background-image: -moz-linear-gradient(top, #30729C, #1A4966);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#30729C), to(#1A4966));
+	background-image: -webkit-linear-gradient(top, #30729C, #1A4966);
+	background-image: -o-linear-gradient(top, #30729C, #1A4966);
+	background-image: linear-gradient(to bottom, #30729C, #1A4966);
+	background-repeat: repeat-x;
+	border-color: #1A4966;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#30729C', endColorstr='#1A4966', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-kz:hover {
+	background-position: 0 -15px;
+	transition: background-position 0.1s linear 0s;
+    text-decoration: none;
+}
+
+.btn-kz:hover,
+.btn-kz:active,
+.btn-kz.active,
+.nav > li .btn-kz:hover,
+.nav > li .btn-kz:active,
+.nav > li .btn-kz.active,
+.nav > li .btn-kz:focus,
+.btn-kz.disabled,
+.btn-kz[disabled] {
+	color: #FFFFFF;
+	background-color: #1A4966;
+	*background-color: #003bb3;
+}
+
+.sidebar-nav .btn-kz {
+	font-weight: bold;
+}
+*/
+
+/*
+.btn-default,
+.btn-primary {
+  color: #f1f4f5;
+  background-color: #30729c;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #f1f4f5;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+*/
+
+
+#top-nav.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+#top-nav.navbar-default .navbar-nav > li > a:hover,
+#top-nav.navbar-default .navbar-nav > li > a:focus,
+#top-nav.navbar-default .navbar-nav > li > a:active,
+#top-nav.navbar-default .navbar-nav > li > a.active {
+	color: #000;
+}
+
+#sidebar-main {
+	color: 	@content-color-blue;
+	padding-left: 0;
+    padding-right: 30px;
+}
+
+	#sidebar-main > ul > li {
+		margin-bottom: 20px;
+	}
+
+	#sidebar-main > ul > li > .btn {
+		font-size: 16px;
+	}
+
+    #sidebar-main #sidebar-buttons .btn {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        font-size: 17px;
+        font-weight: normal;
+        font-family: @heading-font-family;
+    }
+
+    .nav > li > a.sidebar-btn:focus,
+    .nav > li > a.sidebar-btn:hover {
+        background-color: #fff;
+    }
+
+	#sidebar-main #sidebar-search.well {
+		padding: 8px; /* Instead of default 19px */
+	}
+
+	#sidebar-main .nav-block h3 {
+		color: #165176;
+	}
+
+	#sidebar-main #sidebar-search {
+		background-color: #e4ebef;
+	}
+
+	#sidebar-search .blurb {
+		font-size: 20px;
+        color: @content-color-blue;
+		font-family: @heading-font-family;
+	}
+
+    #sidebar-search .mw-searchInput {
+        font-size: 16px;
+        font-family: @heading-font-family;
+		.placeholder(@input-color-placeholder);
+	}
+
+    #sidebar-buttons .img-icon {
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        vertical-align: text-top;
+        width: 24px;
+    }
+
+    #portals-list-btn .img-icon {
+		.background-image('images/sidebar-btns/menu.png');
+    }
+    .wr-sidebar-btn-donate .img-icon {
+		.background-image('images/sidebar-btns/donate.png');
+    }
+    .wr-sidebar-btn-feedback .img-icon {
+		.background-image('images/sidebar-btns/feedback.png');
+    }
+
+	.wr-sidebar-btn-guides .img-icon {
+		/* @embed */
+		background-image: url('images/sidebar-btns/guides-ltr.png');
+	}
+
+
+#font-resizer ul.list-inline {
+	display: inline-block;
+}
+
+.nav.navbar-nav li {
+	font-weight: bold;
+
+}
+
+/*
+#top-nav .navbar-right ul > li {
+	text-align: left;
+}
+*/
+
+article {
+	margin-bottom: 20px;
+}
+
+article h1,
+article h2,
+article .h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+	color: @primary-color-blue;
+	/* font-weight: bold; */
+}
+
+article h2,
+article .h2 {
+    font-family: @heading-font-family;
+	font-size: 17px;
+}
+
+article h3 {
+	font-family: @heading-font-family;
+	font-size: 15px;
+}
+
+article h4 {
+	font-size: 14px;
+}
+
+/* We shouldn't have these on the site */
+article h5 {
+	font-size: 14px;
+}
+
+
+article h2 {
+	border-bottom: 1px solid @primary-color-blue;
+    padding-top: 10px;  /* Icon height is 24px, margin-top 20px + padding-top 10px = total 30px */
+}
+
+article header .article-type {
+    /* Prevents selection along with the header itself on double-click */
+    display: inline-block;
+    /* Prevent select, period */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font-size: small;
+    margin-left: 5px;
+}
+
+article header h1 {
+    font-family: @heading-font-family;
+    font-weight: normal;
+    color: @primary-color-green;
+	font-size: 36px; /* Bootstrap's default anyway, but let's be precise */
+	margin-top: 0;
+
+	background-repeat: no-repeat;
+	background-position: left top;
+	.background-image("images/article-type/Default.png");
+    padding-top: 8px;  /* image height=44px, font size=36px, 44-36 = 8px */
+    padding-left: 65px; /* image width = 55px, + 10px for spacing */
+    overflow: visible;
+}
+
+article header h1 {
+	.article-type-portal & {
+    	.background-image("images/article-type/Portal.png");
+	}
+	.article-type-right & {
+    	.background-image("images/article-type/Right.png");
+	}
+	.article-type-service & {
+		.background-image("images/article-type/Service.png");
+	}
+	.article-type-term & {
+    	.background-image("images/article-type/Term.png");
+	}
+	.article-type-proceeding & {
+		.background-image("images/article-type/Proceeding.png");
+	}
+	.article-type-health & {
+		.background-image("images/article-type/Health.png");
+	}
+	.article-type-organization & {
+		.background-image("images/article-type/Organization.png");
+	}
+	.article-type-government & {
+		.background-image("images/article-type/Government.png");
+	}
+	.article-type-ruling & {
+		.background-image("images/article-type/Ruling.png");
+	}
+	.article-type-law & {
+		.background-image("images/article-type/Law.png");
+	}
+	.article-type-user & {
+		.background-image("images/article-type/User.png");
+	}
+	.article-type-letter & {
+		.background-image("images/article-type/Letter.png");
+	}
+
+	// Remaining types: faq, newsletter, event
+}
+
+
+article header h1 .article-type {
+	font-size: 14px;
+	font-weight: normal;
+	/* As .article-type is a <span> (inline element), it is treated as part */
+	/* of the heading content when selecting text by multiple clicks and thus */
+	/* selected together with heading content. */
+	/* This enforces non-selection without changing the look. */
+	display: inline-block;
+}
+
+/** Facebook */
+#content > header .fb-like {
+    float: right;
+
+	// fixes width issue/bug on mobile
+	text-align: right;
+	width: auto !important;
+}
+
+
+@media (min-width: 768px) {
+	#navbar-top-collapse {
+		display: none !important;
+	}
+
+	#top-nav #nav-links.navbar-nav > li > a {
+		/* Align links to the bottom instead of middle */
+		padding-bottom: 25px; /*top-bar-padding*/
+		padding-top: 45px; /*top-bar-padding*/
+		padding-right: 7px;
+		padding-left: 7px;
+	}
+
+	#top-nav ul.navbar-right {
+		padding-left: 0;
+	}
+
+	#top-nav .navbar-right li {
+		list-style-type: none;
+	}
+}
+
+
+@media (min-width: 992px) {
+  #top-nav #nav-links.navbar-nav > li > a {
+    padding-right: 15px;
+  	padding-left: 15px;
+  }
+}
+
+	#top-nav .navbar-right .list-inline > li {
+		border-right: 1px solid #ffffff;
+	}
+	#top-nav .navbar-right .list-inline > li:first-child {
+		border-left: none;
+	}
+
+#top-nav .navbar-right a {
+	color: #fff;
+}
+
+#top-nav .navbar-right > li {
+	/* border-left: 1px solid #FFFFFF; */
+}
+
+/* RL/CSS-JANUS bug! flips .navbar-right to .navbar-left, even though it's a class and not a property! */
+/* Temporarily I've put down .navbar-left here */
+/*
+#top-nav .navbar-left > li:not(:last-child) {
+	border-right: none;
+}
+*/
+
+#top-nav .navbar-right > li:first-child {
+	border-left: none;
+}
+
+
+#top-nav a:hover,
+#top-nav a:focus {
+	text-decoration: none;
+	box-shadow: none;
+	color: #000;
+}
+
+#font-resizer {
+	text-align: center;
+}
+
+#font-resizer > a {
+	padding-bottom: 20px; /*top-bar-padding*/
+    padding-top: 20px; /*top-bar-padding*/
+}
+
+.font-resizer-icon {
+	height: 30px;
+	display: block;
+	letter-spacing: -5px;
+}
+
+.font-resizer-label {
+	display: block;
+	font-weight: normal;
+	font-size: 115%;
+}
+
+#font-resizer-dialog, #font-resizer-dialog a {
+	color: #000;
+}
+
+#kz-sister-sites {
+    height: 90px;	/*@-top-bar-h*/
+    line-height: 20px; /*top-bar-padding*/
+    padding-top: 15px;/*top-bar-padding*/
+    padding-bottom: 15px; /*top-bar-padding*/
+}
+
+	#kz-sister-sites ul {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.kz-sister-site-ar {
+		font-size: larger;
+    }
+
+/*
+	article > .row {
+*/
+
+#article-info {
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#catlinks {
+    color: #6a8491;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Emphasis box
+ */
+
+.emphasis-list {
+    /*
+    background-color: #E9F1DF;
+    padding: 15px;
+    margin-bottom: 30px;
+    */
+}
+
+.emphasis-list .emphasis-item {
+	padding-top: 20px;
+}
+
+.emphasis-list .emphasis-item:first-child {
+	padding-top: 0;
+}
+
+.emphasis-item .emphasis-item-text {
+	font-size: 14px;
+    font-weight: bold;
+    margin-left: 33px; /* Icon width 27px + 6px margin */
+}
+
+.emphasis-item .emphasis-item-icon {
+	min-height: 22px; /* Icon height */
+    width: 27px; /* Icon width */
+    float: left;	/* column-like */
+
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.emphasis-item.emphasis-type-exclamation .emphasis-item-icon {
+	.background-image("images/emphasis/Exclamation-rtl.png");
+}
+
+.emphasis-item.emphasis-type-government .emphasis-item-icon {
+	.background-image("images/emphasis/Government-rtl.png");
+}
+
+.emphasis-item.emphasis-type-info .emphasis-item-icon {
+	.background-image("images/emphasis/Info-rtl.png");
+}
+
+.emphasis-item.emphasis-type-money .emphasis-item-icon {
+	.background-image("images/emphasis/Money-rtl.png");
+}
+
+.emphasis-item.emphasis-type-question-mark .emphasis-item-icon {
+	.background-image("images/emphasis/Question-Mark-rtl.png");
+}
+
+.emphasis-item.emphasis-type-forbidden .emphasis-item-icon {
+	.background-image("images/emphasis/Forbidden-rtl.png");
+}
+
+
+/**
+ * Summary
+ */
+
+.article-intro {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .article-intro {
+        margin-bottom: 35px;
+    }
+}
+
+.intro-box-wrapper {
+    float: left;
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.article-summary {
+    width: 65%;
+}
+
+.article-see-also {
+    width: 35%;
+}
+
+@media (min-width: 768px) {
+    .article-summary {
+        width: 70%;
+    }
+    .article-see-also {
+        width: 30%;
+    }
+}
+
+/* Alone || all 3 boxes in mobile */
+.article-summary:only-child,
+.article-summary:nth-last-child(3) {
+    width: 100%;
+}
+
+
+@media (min-width: 992px) {
+    .article-summary {
+        width: 75%;
+    }
+
+    .article-see-also {
+        width: 25%;
+    }
+
+    /* All 3 boxes && screen-md */
+    .article-summary:nth-last-child(3) {
+        width: 60%;
+    }
+}
+
+/* If both Forms & See-Also in low res, 50% each, on a new line */
+.article-forms + .article-see-also {
+    width: 50%;
+}
+
+.article-forms {
+    width: 50%;
+}
+
+@media (min-width: 992px) {
+    .article-forms, .article-forms + .article-see-also {
+        width: 20%;
+    }
+}
+
+/* Padding between boxes */
+.article-summary + .article-see-also,
+.article-forms + .article-see-also {
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    /* Padding between boxes */
+    .article-forms,
+    .article-summary + .article-see-also,
+    .article-forms + .article-see-also {
+        padding-left: 30px;
+    }
+}
+
+.intro-box {
+    /*
+	    background-color: #eff2f3;
+	    border-top: 2px solid @content-color-lightblue;
+	    border-bottom: 2px solid @content-color-lightblue;
+	*/
+    background-color: #E9F1DF;
+    border-color: @primary-color-green;
+    border-width: 2px 0;
+    border-style: solid;
+
+	padding: 15px;
+	min-height: 130px; /* Save $.fn.equalizeCols some work, perhaps  */
+}
+
+/*
+.article-type-portal .intro-box {
+	background-color: #eff2f3;
+	border-top: 2px solid @content-color-lightblue;
+	border-bottom: 2px solid @content-color-lightblue;
+}
+*/
+
+
+.intro-box-content {
+}
+
+.intro-box > ul {
+    padding-left: 15px;
+}
+
+.intro-box header > h2,
+.intro-box .header > h2,
+.intro-box .header > .h2 {
+    color: @primary-color-green;
+    /*
+    color: @content-background-blue;
+    */
+	background-image: none;
+	border: none;
+    padding-left: 0;
+    min-height: inherit;
+    margin-top: 0;  /* Cancel the margin that all H2s get */
+    padding-top: 0; /* The box already has its inner padding */
+}
+
+/*
+.article-type-portal .intro-box header > h2,
+.article-type-portal .intro-box .header > h2,
+.article-type-portal .intro-box .header > .h2 {
+	color: @content-color-blue;
+}
+*/
+
+/*
+.article-emphasis-list .list-group-item {
+	background-color: #e9f1df;
+}
+
+.list-group.article-emphasis-list .list-group-item [class^="icon-"],
+.list-group.article-emphasis-list .list-group-item [class*=" icon-"] {
+	color: #6d943c;
+}
+
+*/
+
+#user-dropdown-menu > a {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#user-dropdown-menu .caret {
+	border-bottom-color: #fff;
+	border-top-color: #fff;
+}
+
+#user-dropdown-menu a:hover .caret,
+#user-dropdown-menu a:active .caret,
+#user-dropdown-menu a.active .caret,
+#user-dropdown-menu a:focus .caret {
+	border-bottom-color: #000;
+	border-top-color: #000;
+}
+
+#user-dropdown-menu .dropdown-menu a {
+	color: #000;
+}
+
+.navbar-toggle {
+	padding: 9px 6px;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
+#search-toggle:hover, #search-toggle:focus {
+    background-color: transparent;
+    border-color: #FFF;
+    border-width: 1px;
+    color: #FFF;
+}
+
+.navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar {
+    background-color: #FFF;
+}
+
+
+@media (min-width: 768px) {
+  #search-toggle {
+    display: none;
+  }
+  .search-top-collapse {
+  	  display: none;
+  }
+}
+
+.search-top-collapse {
+	border-top: 1px solid #E6E6E6;
+	/*
+	margin-left: -15px;
+    margin-right: -15px;
+    padding: 7px 15px;
+    */
+}
+
+#top-search-form {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#search-toggle {
+	color: #DDDDDD;
+	font-size: 14px;
+	padding: 6px 10px;
+}
+
+
+/* Category links styling */
+/* Copy of BS3 .list-inline */
+.catlinks ul {
+    list-style: none;
+    padding: 0;
+    display: inline;
+}
+
+.catlinks ul > li {
+    /* Reset MW .catlinks li */
+    border: 0;
+    margin: 0;
+    line-height: 1em;
+
+    /* Copy of BS3 .list-inline > li */
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    /* And now the actual styling */
+    border-left: 1px solid #6a8491;
+}
+.catlinks ul > li:first-child {
+    color: #6a8491;
+    border-left: none;
+}
+
+/* Don't change color of visited links here */
+.catlinks a,
+.catlinks a:visited {
+    color: #6a8491;
+}
+
+.catlinks a:hover,
+.catlinks a:focus,
+.catlinks a:active {
+    color: #4B6C7D !important;
+    text-decoration: none;
+}
+
+/* Edit sections */
+.mw-editsection {
+	margin-left: 1em;
+	font-size: small;
+	/* As .mw-editsection is a <span> (inline element), it is treated as part */
+	/* of the heading content when selecting text by multiple clicks and thus */
+	/* selected together with heading content. */
+	/* This enforces non-selection without changing the look. */
+	display: inline-block;
+}
+
+.mw-editsection-bracket {
+	display: none;
+}
+
+/* copied from font-awesome's icon rules (icon-pencil) */
+
+.mw-editsection a:before {
+    content: "";
+}
+
+.mw-editsection a:before {
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: 2px;
+}
+
+.mw-editsection a {
+    background-image: none;
+    background-position: 100% 0;
+    background-repeat: repeat;
+    display: inline;
+    height: auto;
+    line-height: normal;
+    margin-top: 0;
+    vertical-align: baseline;
+    width: auto;
+}
+.mw-editsection a {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+
+
+/* We place ==endarticle== at the end of portals to make #lsth (heading-based transclusion to work correctly,
+  that is, have a stop point. We then proceed to hiding it using CSS. */
+/* Unfortunately, MW sets the ID for the child span and not the parent H2. Since there's no CSS parent selector, we do this in JS */
+span#endarticle.mw-headline {
+	display: none;
+}
+/* Hide it from TOC as well */
+li.toclevel-1 a[href ^="#endarticle"] {
+	display: none;
+}
+
+/** Hide advanced search for anons in Special:Search */
+body.user-loggedout.mw-special-Search #mw-searchoptions,
+body.user-loggedout.mw-special-Search .mw-search-formheader {
+    display: none;
+}
+
+/* Pretty selection... */
+/*
+#content *::-moz-selection {
+    background-color: #FFFF63;
+}
+#content *::selection {
+    background-color: #FFFF63;
+}
+*/
+
+#mw-js-message {
+	display: none;
+}
+
+
+
+/* Main Page style */
+
+/* mainpage-jumbtron */
+.mainpage-jumbotron {
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  background-color: #e4ebef;
+  border: 1px solid #A0BFD1;
+  text-align: center;
+
+	#content & a {
+		text-decoration: none;
+		color: @link-color-blue;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			text-decoration: underline;
+		}
+
+	}
+}
+
+.mainpage-jumbotron h2,
+.mainpage-jumbotron .header {
+  line-height: 1;
+  color: @content-color-blue;
+  font-family: @heading-font-family;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.mainpage-jumbotron p {
+  line-height: 1.4;
+  color: #295774;
+  /* margin-bottom: 1.5em; */
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+
+#bodySearchJumbo {
+	margin-top: 20px;
+	//font-size: 20px;
+}
+
+#bodySearchInputJumbo {
+}
+
+#bodySearchJumbo .btn {
+}
+
+#bodySearchJumbo .btn-text {
+    display: none;
+}
+
+#bodySearchJumbo .icon {
+	padding-left: 10px; // Spacing between icon and text
+}
+
+@media screen and (min-width: 768px) {
+	#bodySearchJumbo .btn {
+		padding-left: 25px;
+		padding-right: 25px;
+		margin-left: 10px;
+	}
+    #bodySearchJumbo .btn-text {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .mainpage-jumbotron {
+  	padding: 30px 80px;
+  }
+
+  .mainpage-jumbotron h2,
+  .mainpage-jumbotron .header {
+  	  font-size: 43px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainpage-jumbotron {
+  	padding: 30px 170px;
+
+  }
+  .mainpage-jumbotron h2,
+  .mainpage-jumbotron .header {
+
+  }
+}
+
+/* /mainpage-jumbtron */
+
+/* Our internal "ads" to promote content */
+.mainpage-promotions {
+}
+
+
+.mainpage-promotion-box {
+	margin-top: 20px;
+
+
+	& > .inner {
+		background-color: @content-background-blue;
+		border-top: 3px solid @primary-color-blue;
+		padding: 0 20px 15px;
+	}
+
+	& .header h2 {
+		font-size: 18px;
+		border-bottom: none;
+		text-decoration: none;
+		margin-top: 0;
+
+		#content & a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	& .content {
+
+	}
+}
+
+
+.mainpage-portals {
+}
+
+/* mainpage-portals-box */
+.mainpage-portals-box-header  {
+	background-repeat: no-repeat;
+	background-position: left bottom;						/* Old browsers fallback */
+	min-height: 55px;
+	padding-left: 73px;
+
+}
+
+.mainpage-portals-box {
+}
+
+    .portal-box, .mainpage-portals-box {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .portal-box, .mainpage-portals-box {
+            margin-bottom: 30px;
+        }
+    }
+
+    #mw-content-text .portal-box ul {
+        .list-style-image("images/bullet-icon-green.png");
+    }
+
+    #mw-content-text .portal-forums ul {
+    	.list-style-image("images/bullet-icon-blue.png");
+    }
+
+    .portal-box-header {
+		.background-image("images/portal-box-icon.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        min-height: 24px; /* icon height */
+        padding-left: 35px;
+        position: relative; /* To allow for position:absolute of child H2 (in JS) */
+    }
+    .portal-box-header h2 {
+        color: @primary-color-green;
+
+        /* Reset styles of regular H2s */
+        background: none;
+        padding-left: 0; /* Same reason */
+        margin-top: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+        border-bottom: none;
+    }
+
+    .portal-forums .portal-box-header {
+		.background-image("images/portal-forums.png");
+    }
+
+    .portal-forums .portal-box-header h2 {
+        color: @primary-color-blue;
+    }
+
+	#content .portal-forums a.external {
+		.background-image('images/external-link-ltr-icon.png');	// blue
+	}
+
+.mainpage-portals-box.box-1 .mainpage-portals-box-header {
+	.background-image("images/portals-list/Portals_List1.png");
+}
+.mainpage-portals-box.box-2 .mainpage-portals-box-header {
+	.background-image("images/portals-list/Portals_List2.png");
+}
+.mainpage-portals-box.box-3 .mainpage-portals-box-header {
+	.background-image("images/portals-list/Portals_List3.png");
+}
+
+/* English Site Portals List */
+
+.mainpage-portals-box.box-hebrew .mainpage-portals-box-header {
+	background-image: url("images/portals-list/Portals_List_Hebrew.png");
+}
+
+.mainpage-portals-box.box-english .mainpage-portals-box-header {
+	background-image: url("images/portals-list/Portals_List_English.png");
+}
+
+.portal-box-inner, .mainpage-portals-box-inner {
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+.portal-box-inner {
+    background-color: @content-background-green;
+    border-top: 3px solid @content-color-green;
+}
+
+.portal-forums .portal-box-inner {
+    background-color: #f4f6f7;
+    border-color: @content-color-lightblue;
+}
+
+.mainpage-portals-box-inner {
+	background-color: @content-background-green;
+	border-top: 6px solid @content-color-green;
+}
+
+
+
+/*
+@media screen and (min-width: 768px) {
+	.mainpage-portals-box-inner {
+		font-size: 17px;
+	}
+}
+*/
+
+.mainpage-portals-box-inner > ul > li,
+.portal-box-inner > ul > li {
+	line-height: 1.5em;
+}
+
+	.mainpage-portals-box-inner li > span,
+	.mainpage-portals-box-inner li a,
+    .portal-box-inner li > span,
+    .portal-box-inner li a {
+		/* But keep the text black-grey */
+		color: #464747;
+    }
+
+    .mainpage-portals-box-inner li > span,
+    .mainpage-portals-box-inner li a {
+        font-weight: bold;
+    }
+
+
+.mainpage-portals-box .more-portals-link a {
+	color: #abb96c;
+	font-weight: bold;
+}
+
+
+body.article-type-mainpage #sidebar-main {
+	display: none !important;
+}
+
+body.article-type-mainpage header {
+	display: none;
+}
+
+body.article-type-mainpage article {
+	width: 100%;
+}
+
+body.article-type-mainpage #catlinks {
+  display: none;
+}
+
+body.article-type-mainpage #article-info {
+	display: none;
+}
+
+/* /Main Page style */
+
+
+#portals-list-wrapper .modal-title {
+    text-align: center;
+    /* Following 5 lines: variant of .mainpage-jumbotron .header */
+    line-height: 1em;
+    color: @content-color-blue;
+    font-family: @heading-font-family;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#portals-list-wrapper .intro {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#portals-list-wrapper .mainpage-portals-box-inner {
+	font-size: 15px;
+}
+
+#portals-list-wrapper .modal-dialog {
+    padding-top: 55px; /* Same as height(#top-nav)+5, to push under it */
+}
+
+@media screen and (min-width: 768px) {
+	#portals-list-wrapper .modal-dialog {
+		width: auto;
+		max-width: 100%;
+		padding-top: 95px; /* Same as height(#top-nav)+5, to push under it */
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#portals-list-wrapper .modal-dialog {
+		max-width: 85%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#portals-list-wrapper .modal-dialog {
+		max-width: 75%;
+	}
+}
+
+
+
+
+#portals-list-btn .icon-portals-menu {
+	vertical-align: middle;
+	line-height: inherit;
+}
+
+
+#portals-list .list-group-item {
+	font-weight: bold;
+}
+
+#article-actions-menu {
+	float: right;
+	margin-left: 5px;
+
+  #content & a {
+    text-decoration: none;
+  }
+}
+	#article-actions-menu .dropdown-toggle {
+		color: @primary-color-green; /* Green like the title */
+	}
+
+
+/**
+ * Old Editor Toolbar
+ */
+#editorToolbar {
+    position: absolute; /* OVERRIDDEN BY COMPLIANT BROWSERS */
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    background-color: #5D5E5D;
+    border-top: 1px solid #FFFFFF;
+    padding: 5px;
+    color: #FFFFFF;
+    /* border-radius: 7px 7px 0 0; */
+
+  & a {
+    text-decoration: none;
+  }
+}
+/* IGNORED BY IE6 */
+body > #editorToolbar {
+    position: fixed;
+    opacity: 0.75;
+}
+
+#editorToolbar > ul {
+    margin-bottom: 0;
+}
+
+#editorToolbar a {
+    color: #FFFFFF;
+}
+
+/** Separator between page actions and general actions */
+#editorToolbar li.tb-help {
+    border-left: 1px solid;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+/* Hide content per user group - with matching JS code to display it */
+.user-only-content,
+.editor-only-content,
+.bot-only-content,
+.staff-only-content,
+.sysop-only-content,
+.bureaucrat-only-content,
+.holocaustproject-only-content,
+.socialworkers-only-content {
+    display: none;
+}
+
+.non-editor-content {
+	display: none;
+}
+
+
+/**************************************/
+/*          MediaWiki Import          */
+/**************************************/
+
+ul {
+	padding-left: 1em;
+}
+
+ol {
+	padding-left: 2em;
+}
+
+textarea {
+    width: 100%;
+}
+
+dt {
+    font-weight: bold;
+}
+dl {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+dd {
+    margin-left: 1.6em;
+}
+
+#content a.external {
+    background-position: center right;
+    background-repeat: no-repeat;
+	.background-image('images/external-link-ltr-icon.green.png');
+    padding-right: 13px;
+}
+
+#siteNotice #localNotice  {
+	padding-bottom: 25px;
+}
+
+.article-type-mainpage #siteNotice {
+	display: none;
+}
+
+/**
+ * wikitable class for skinning normal tables
+ * keep in sync with commonPrint.css
+ */
+table.wikitable {
+    margin: 1em 0;
+    background-color: #f9f9f9;
+    border: 1px #aaa solid;
+    border-collapse: collapse;
+    color: black;
+}
+table.wikitable > tr > th,
+table.wikitable > tr > td,
+table.wikitable > * > tr > th,
+table.wikitable > * > tr > td {
+    border: 1px #aaa solid;
+    padding: 0.2em;
+}
+table.wikitable > tr > th,
+table.wikitable > * > tr > th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+table.wikitable > caption {
+    font-weight: bold;
+}
+
+
+/* wikitable blue class for skinning normal tables */
+table.blue {
+    margin: 1em 1em 1em 0;
+    background: #EFF7FF;
+    border: 1px #A5B6CF solid;
+    border-collapse: collapse;
+}
+.blue th, .blue td {
+    border: 1px #A5B6CF solid;
+    padding: 0.2em;
+}
+.blue th {
+    background: #BCD9F4;
+    text-align: center;
+}
+.blue caption {
+    font-weight: bold;
+}
+
+/* wikitable - zebra striped */
+table.zebra {
+    border-collapse: collapse;
+    border: 1px solid #D9D9D9;
+}
+
+table.zebra tr:nth-child(odd) td {
+    background-color: #EDF3FE;
+}
+
+table.zebra tr th {
+    background-color: #3D80DF;
+    border: 1px solid #7DAAEA;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+table.zebra tr:hover td {
+    background-color: #BCD4EC;
+}
+
+table.zebra tr td {
+    border-left: 1px solid #D9D9D9;
+    padding: 3px 8px;
+}
+
+
+/************************/
+/*  Bootstrap overrides */
+/************************/
+
+/* This is a temporary bugfix for BS 3.0.0 */
+.modal-backdrop.in {
+    opacity: 0.5;
+}
+
+/**************************************/
+/*          Extensions Overrides       */
+/**************************************/
+
+/** Extension:ShareBar */
+.article-type-mainpage #bottom-sharebar {
+    margin-left: 0; /* get rid of offset when there's no sidebar */
+}
+
+
+/******************/
+/*  Multi-lingual */
+/******************/
+/* Special icons for links to the hebrew wiki */
+#content a.extiw[href *="/he/"],
+#content a.extiw:active[href *="/he/"] {
+	.background-image("images/extiw-he.png");
+	background-position: center right;
+	background-repeat: no-repeat;
+    padding-right: 13px;
+}
+
+/* Don't show icons for HE interwiki links on English main page */
+body.page-Main_Page #content a.extiw[href *="/he/"],
+body.page-Main_Page #content a.extiw:active[href *="/he/"] {
+    background: none;
+    padding: 0;
+}
+
+/* Correct directionality when page dir is different from site/user dir */
+
+.mw-content-rtl .mw-content-ltr .intro-box-wrapper {
+	/* @noflip */ float: left;
+}
+
+.mw-content-rtl .mw-content-ltr .wr-sharebar {
+	/* @noflip */ direction: rtl;
+}
+
+#content .mw-content-rtl .mw-content-ltr a.external {
+	/* @noflip */ background-position: center right;
+	/* @noflip */ padding-left: 0;
+	/* @noflip */ padding-right: 13px;
+	/* @noflip */ .background-image('images/external-link-ltr-icon.png');
+}
+
+.mw-content-rtl .mw-content-ltr .emphasis-item .emphasis-item-icon {
+	/* @noflip */float: left;
+}
+.mw-content-rtl .mw-content-ltr .emphasis-item .emphasis-item-text {
+	/* @noflip */margin-right: 0;
+	/* @noflip */margin-left: 33;
+}
+
+.mw-content-ltr .mw-content-rtl .intro-box-wrapper {
+	/* @noflip */ float: right;
+}
+
+/* Red links (missing page): override regular styling of links */
+a.new {
+	color: #BA0000 !important;
+}
+
+/**********************************************************/
+/* iOS-specific, due to Apple requirements for mobile app */
+
+body.iOS-device .kz-footer-donation,
+body.iOS-device .kz-footer-feedback,
+body.iOS-device .kz-nav-donation,
+body.iOS-device .kz-nav-feedback,
+body.iOS-device .wr-sidebar-btn-donate,
+body.iOS-device .wr-sidebar-btn-feedback {
+	display: none;
+}

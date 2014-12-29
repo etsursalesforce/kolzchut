@@ -1,0 +1,158 @@
+@import "mediawiki.mixins";
+
+@btn-background: #608835;
+
+/* Fix jQuery UI Dialog priority over Bootstrap elements */
+.wr-sharebar-dialog {
+    z-index: 1100;
+}
+
+.wr-sharebar-modal .modal-content {
+    min-height: 500px;
+}
+
+.nav > li > a.sidebar-btn {
+    padding: 0;
+}
+
+.wr-sharebar {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-color: #478a83;
+    border-style: dashed;
+    border-width: 1px 0;
+
+    /* border-image, where supported (e.g., IE11+) */
+    /* @embed */
+    border-image: url("images/sharebar-border.png") 1 1 1 0 repeat;
+}
+
+.sharebar-section {
+    margin: 0;
+    display: inline-block;
+}
+
+.sharebar-section a {
+    color: #464646;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		text-decoration: none;
+		color: #131313;
+		position: relative;
+		top: -1px;
+		right: -1px;
+	}
+}
+
+.wr-sharebar-changerequest .btn {
+    padding: 0 10px;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+    	position: static; /* Undo the positioning damage I do above */
+	}
+
+	#content &:hover,
+	#content &:focus,
+	#content &:active,
+	#content &.active {
+		color: darken(#ffffff, 15% );
+	}
+}
+
+
+@media (min-width: 992px) {
+    .wr-sharebar > ul.section-localshare > li {
+        margin-right: 30px;
+    }
+
+    .wr-sharebar > ul.section-cloudshare > li {
+        margin-right: 20px;
+    }
+
+    .wr-sharebar-changerequest .btn {
+        padding: 0 20px;
+    }
+}
+
+
+.wr-sharebar > ul > li > a {
+    background-repeat: no-repeat;
+    display: inline-block;
+    min-height: 21px;
+}
+
+
+/* Print only works with JS */
+.client-nojs .wr-sharebar-print {
+    display: none;
+}
+
+.sharebar-section.section-localshare > li > a {
+    background-position: left;
+    padding-left: 26px; /* 21px for image + 5px margin */
+}
+
+.wr-sharebar-print > a {
+    .background-image("images/print.png");
+}
+
+.wr-sharebar-send > a {
+    .background-image("images/send.png");
+}
+
+.sharebar-section.section-cloudshare > li > a {
+    background-position: right;
+    padding-right: 23px; /* 21px for image + 2px margin */
+}
+
+.wr-sharebar-facebook > a {
+    .background-image("images/facebook.png");
+}
+
+.wr-sharebar-twitter > a {
+    .background-image("images/twitter.png");
+}
+
+.wr-sharebar-gplus > a {
+    .background-image("images/gplus.png");
+}
+
+
+.wr-sharebar .section-changerequest {
+    float: right;
+}
+
+.wr-sharebar .btn {
+    background-color: @btn-background;
+    border-color: @btn-background;
+    color: #FFFFFF;
+}
+.wr-sharebar .btn:hover,
+.wr-sharebar .btn:focus,
+.wr-sharebar .btn:active,
+.wr-sharebar .btn.active {
+    background-color: #53762e;
+    border-color: #466327;
+    color: #FFFFFF;
+}
+.wr-sharebar .btn.disabled:hover,
+.wr-sharebar .btn.disabled:focus,
+.wr-sharebar .btn.disabled:active,
+.wr-sharebar .btn.disabled.active,
+.wr-sharebar .btn[disabled]:hover,
+.wr-sharebar .btn[disabled]:focus,
+.wr-sharebar .btn[disabled]:active,
+.wr-sharebar .btn[disabled].active,
+fieldset[disabled] .wr-sharebar .btn:hover,
+fieldset[disabled] .wr-sharebar .btn:focus,
+fieldset[disabled] .wr-sharebar .btn:active,
+fieldset[disabled] .wr-sharebar .btn.active {
+    background-color: @btn-background;
+    border-color: @btn-background;
+}

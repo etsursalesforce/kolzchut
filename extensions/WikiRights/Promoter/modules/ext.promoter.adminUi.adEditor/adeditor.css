@@ -1,0 +1,69 @@
+/**
+ * Styles specific to Special:PromoterAds/edit
+ *
+ * This file is part of the Promoter Extension to MediaWiki
+ * https://www.mediawiki.org/wiki/Extension:Promoter
+ *
+ * @section LICENSE
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ * http://www.gnu.org/copyleft/gpl.html
+ *
+ * @file
+ */
+
+.mw-label {
+	font-weight: bold;
+}
+
+form#pr-ad-editor .mw-input.mw-htmlform-nolabel {
+	/* Applies to things like checkboxes that have no label */
+	font-weight: bold;
+	margin-left: 0;
+}
+form#pr-ad-editor .mw-input {
+	/* Everything else */
+	margin-left: 1em;
+}
+
+form#pr-ad-editor textarea {
+	width: auto; // Override default style of 100%
+}
+
+#pr-formsection-clone-ad {
+	border: none;
+	display: none;
+}
+#pr-formsection-clone-ad legend {
+	display: none;
+}
+
+/* === === */
+.pr-message-table {
+	font-family: monospace;
+	font-size: 1em;
+	width: 100%;
+}
+.pr-message-text-origin, .pr-message-text-native, .pr-message-text-origin-header, .pr-message-text-native-header {
+	width: 50%;
+	vertical-align: top;
+}
+.pr-message-text-origin {
+	padding: 0;
+	margin: 0;
+}
+.pr-message-text-native {
+	padding: 0;
+	margin: 0.2em;
+}

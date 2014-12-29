@@ -1,0 +1,2 @@
+editor-comment.svg: based on "edit-clear.svg" from the Tango set. Public Domain.
+

@@ -1,0 +1,157 @@
+@import "mediawiki.mixins";
+@import "variables";
+@import "mixins";
+
+
+//** Infobox
+.wr-infobox {
+	float: right;
+	clear: right;
+	margin-bottom: 20px;
+
+	& h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+
+	.infobox-content > .row {
+		margin: 0;
+		border-top: 1px solid #CCD2D9;
+		padding: 5px 0;
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+
+	.infobox-value {
+		padding-left: 0;
+	}
+
+	a.external {
+		word-wrap: break-word;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.wr-infobox {
+		margin-left: 30px;
+	}
+}
+
+
+
+
+//** "Example" template
+.wr-example {
+	background-color: #f5f6f8;
+	padding: 10px 25px;
+	margin: 15px;
+}
+
+.wr-example-title {
+	color: @content-color-lightblue;
+	font-family: @heading-font-family;
+	font-size: @content-heading-font-size;
+	.background-image('images/templates/example.png');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	min-height: 25px; /* Image height */
+	padding-left: 30px; /* image width = 25px, padding = 5px, total 30px */
+}
+
+.wr-example-text {
+	color: #2e2e2e;
+}
+
+@media screen and (min-width: 768px) {
+	.wr-example {
+		margin: 15px 30px;
+	}
+
+	.wr-example-title {
+		float: left;
+	}
+
+	.wr-example-text {
+		margin-left: 5.8em; // Leave room for .wr-example-title
+	}
+
+	:lang(en) .wr-example-text {
+		margin-left: 7em; // The english label takes more space
+	}
+
+}
+
+
+
+/* Message box template */
+.wr-mbox {
+	background-color: #e9f1df;
+	border: 1px solid #628734;
+	padding: 15px 20px;
+	margin: 15px;
+	color: #2e2e2e;
+}
+
+@media screen and (min-width: 768px) {
+	.wr-mbox {
+		margin: 15px 30px;
+	}
+}
+
+.wr-mbox-content {
+	.background-image('images/templates/warning.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	min-height: 53px; /* Image height */
+	padding-left: 70px; /* image width = 55px, padding = 15px, total 70px */
+}
+
+.wr-mbox-title {
+	font-weight: bold;
+	font-size: @content-heading-font-size;
+}
+
+.wr-mbox-text {
+}
+
+.wr-mbox-danger {
+	/* Colors from Boostrap's alert-danger.
+	 * @Todo: use mixin
+	 */
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+}
+
+#mw-content-text .wr-mbox ul {
+	.list-style-image("images/bullet-icon-green.png");
+}
+
+.wr-mbox-warning .wr-mbox-content {
+	.background-image('images/templates/warning.png');
+}
+.wr-mbox-editorcomment .wr-mbox-content {
+	.background-image('images/templates/editor-comment.png');
+}
+
+.wr-mbox-articledraft {
+	.wr-mbox-danger;
+	.wr-mbox-content {
+		.background-image('images/templates/warning-danger.png');
+	}
+}
+
+.wr-mbox-articlefreeze {
+	.wr-mbox-danger;
+	.wr-mbox-content {
+		.background-image('images/templates/article-freeze.png');
+	}
+
+}
+
+.wr-mbox-welcome .wr-mbox-content {
+	.background-image('images/templates/welcome.png');
+}
