@@ -64,3 +64,5 @@ require_once( "$IP/extensions/WikiRights/ShareBar/ShareBar.php" );
 require_once( "$IP/extensions/WikiRights/WRApprovedRevs/ApprovedRevs.php" );	# Approved page revisions
 	$wgApprovedRevsShowOnlyToMembers = false;
 
+require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
+    $wgPFEnableStringFunctions = true; #Enable use of String Functions, included in ParserFunctions
