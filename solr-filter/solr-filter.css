@@ -1,0 +1,75 @@
+div#filter {
+    width: 30%;
+    border-left: 1px solid black;
+    float: right;
+}
+
+#filter, #results {
+    padding: 20px 50px;
+}
+
+#filter h2,
+#results h2 {
+    color: #628734;
+    font-size: 17px;
+    font-family: 'Na_OE_Pro-Regular', Arial, sans-serif;
+}
+#results {
+    overflow: hidden;
+}
+
+
+#active-categories .category .close {
+    cursor: pointer;
+}
+#proposed-categories .category .cat {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#results .summary {
+    margin-bottom: 20px;
+}
+
+
+#results .document {
+    margin-bottom: 10px;
+}
+
+#results .guide {
+    float: right;
+    padding: 5px;
+    background-color: #EBEEE0;
+    border: 1px solid #ABB96C;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+#results .guide a {
+    text-decoration: none;
+    color: #464747;
+    font-weight: bold;
+}
+
+#cat-search-btn .img-icon {
+    background-image: url('/solr-filter/calcicon1.png');
+}
+
+
+
+ul.ui-autocomplete {
+    padding: 5px;
+    background: white;
+    z-index: 1050;
+}
+ul.ui-autocomplete li {
+    list-style: none;
+}
+.ui-menu .ui-menu-item a.ac-cat {
+    display: inline-block;
+    margin-left: 5px;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: none;
+}
