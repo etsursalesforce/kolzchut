@@ -294,6 +294,12 @@ class HelenaTemplate extends BaseTemplate {
 								<span class="img-icon pull-left"></span>
 								<span><?php echo $this->getMsg( 'kz-sidebar-portals-list' )->inContentLanguage()->text(); ?></span>
 					</button>
+
+                    <button id="cat-search-btn" class="btn col-sm-12" role="button" data-toggle="modal" data-target="#solr-search-wrapper">
+                        <span class="img-icon pull-left"></span>
+                        <span>מחשבון זכויות</span>
+                    </button>
+
 					<?php
 						global $wgWrGuidesLink;
 						if( !empty( $wgWrGuidesLink ) ) {
@@ -318,6 +324,7 @@ class HelenaTemplate extends BaseTemplate {
 
 			</ul>
 		</div>
+
         <!--/sidebar-->
         <article id="content" class="mw-body col-md-10 col-sm-9 col-xs-12" role="main">
 			<header>
@@ -493,7 +500,51 @@ class HelenaTemplate extends BaseTemplate {
 	</div><!--/container-->
 </footer>
 
-<?php
+
+        <div class="modal modal-long" id="solr-search-wrapper" tabindex="-1" role="dialog" aria-labelledby="solr-search-dialog-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only"></span>
+                        </button>
+                        <h4 class="modal-title">
+                            <span class="sr-only" id="solr-search-dialog-label"></span>
+                            <span aria-hidden="true">
+                                מחשבון זכויות
+                                -
+                                חיפוש לפי קטגוריות
+                            </span>
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="intro" aria-hidden="true"></p>
+                        <div id="solr-search" class="body-content clearfix">
+
+                                <script src="//code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+                                <script src="/solr-filter/mustache.js"></script>
+                                <script src="/solr-filter/solr-filter.js"></script>
+
+                                <link href="https://code.jquery.com/ui/1.9.2/themes/cupertino/jquery-ui.css" rel="stylesheet" type="text/css"/>
+                                <link href="/solr-filter/solr-filter.css" rel="stylesheet" type="text/css"/>
+
+                                <?php
+                                $curr_category = $this->getSkin()->getTitle()->getText();
+                                global $IP;
+                                include($IP.'/solr-filter/filter.php');
+                                ?>
+
+
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+        <?php
     $this->showOldEditorToolbar( $skin );
     echo $this->getPortalsList();
     $this->printTrail();
@@ -544,7 +595,7 @@ class HelenaTemplate extends BaseTemplate {
 			$msgModalLabel = $this->getMsg( 'kz-sidebar-portals-list-tt' )->inContentLanguage()->text();
 
         	$list = <<<LIST
-<div class="modal" id="portals-list-wrapper" tabindex="-1" role="dialog" aria-labelledby="portals-list-dialog-label" aria-hidden="true">
+<div class="modal modal-long" id="portals-list-wrapper" tabindex="-1" role="dialog" aria-labelledby="portals-list-dialog-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
